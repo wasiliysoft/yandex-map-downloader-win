@@ -1,16 +1,15 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-Сборка карты
+Map build
 """
 
 import sys
-from ymaps.builder import YMapBuilder
-
 import logging
 
+from ymaps.builder import YMapBuilder
 
-def main(argv):
+def main():
     """
     Entry point
     """
@@ -22,4 +21,4 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv))
+    sys.exit(main())

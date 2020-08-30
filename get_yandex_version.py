@@ -34,7 +34,7 @@ PARAMS = {
 PROJECT_SEARCH_EXPRESSION = '''"([^"]+)":{"version":"([^"]+)"'''
 API_VERSION = '2.1.31'
 
-class App(object):
+class App():
     """
     Main application class
     """
