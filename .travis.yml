@@ -1,0 +1,12 @@
+# Travis CI
+language: python
+python:
+  - "3.6"
+# command to install dependencies
+install:
+  - pip3 install pytest
+# command to run tests
+script:
+  - pip3 install pylint --quiet
+  - pip3 install --quiet -r requirements.txt
+  - pylint *.py
