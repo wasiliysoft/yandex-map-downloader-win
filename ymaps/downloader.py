@@ -88,7 +88,7 @@ class YMapDownloader(object):
                    "Accept-Encoding": self.accept_encoding,
                    "Accept-Charset": self.accept_charset,
                    "Referer": self.referer}
-        req = requests.Request('GET', "http://%s%s" % (self.GetRandomMirror(), url), headers=headers)
+        req = requests.Request('GET', "https://%s%s" % (self.GetRandomMirror(), url), headers=headers)
         s = requests.Session()
         r = req.prepare()
         try:
