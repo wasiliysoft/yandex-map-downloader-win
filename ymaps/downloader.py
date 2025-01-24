@@ -47,8 +47,8 @@ class YMapDownloader(object):
         return result
 
     def ReadConfig(self):
-        config = configparser.SafeConfigParser()
-        config.readfp(open(self.args.conf))
+        config = configparser.ConfigParser()
+        config.read(self.args.conf)
         self.layer = self.args.layer
 
         try:

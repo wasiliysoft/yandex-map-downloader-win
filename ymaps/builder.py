@@ -73,8 +73,8 @@ class YMapBuilder(object):
         """
         Чтение конфигурации
         """
-        config = configparser.SafeConfigParser()
-        config.readfp(open(ConfFile))
+        config = configparser.ConfigParser()
+        config.read(ConfFile)
         self.DirMap = self.args.dir
         self.TileWidth = int(config.get('MAP', 'TileWidth'))
         self.TileHeight = int(config.get('MAP', 'TileHeight'))
