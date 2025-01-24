@@ -97,7 +97,7 @@ class YMapBuilder(object):
             for x in range(0, width):
                 files.append(os.path.join(self.PrepareDir, '%s_%s.jpg' % (x, y)))
         FileList = ' '.join(files)
-        execute = "montage %s -quality 100%% -mode " \
+        execute = "magick.exe montage %s -quality 100%% -mode " \
                   "Concatenate -tile %sx%s %s" % (FileList, width, height, self.Result)
         print(execute)
         subprocess.check_output(execute, shell=True)
@@ -141,7 +141,7 @@ class YMapBuilder(object):
                             FileList = FileList + ' ' + self.EmptyJPG
                 # Склеиваем
                 OutFileName = os.path.join(self.PrepareDir, "{x}_{y}.jpg".format(x=x, y=y))
-                execute = "montage %s -quality 100%% -mode " \
+                execute = "magick.exe montage %s -quality 100%% -mode " \
                           "Concatenate -tile 10x10 %s" % (FileList, OutFileName)
                 sys.stdout.write("Concatenating %s..." % OutFileName)
                 subprocess.check_output(execute, shell=True)
